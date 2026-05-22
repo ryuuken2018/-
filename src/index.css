@@ -1,0 +1,119 @@
+@import "tailwindcss";
+
+:root {
+  --background: 35 60% 97%;
+  --primary: 12 90% 63%;
+  --secondary: 135 50% 50%;
+  --accent: 43 95% 55%;
+  --card: 0 0% 100%;
+  --muted: 33 20% 90%;
+  --border: 33 20% 80%;
+  --foreground: 24 20% 20%;
+}
+
+@theme {
+  --color-background: hsl(var(--background));
+  --color-primary: hsl(var(--primary));
+  --color-secondary: hsl(var(--secondary));
+  --color-accent: hsl(var(--accent));
+  --color-card: hsl(var(--card));
+  --color-muted: hsl(var(--muted));
+  --color-border: hsl(var(--border));
+  --color-foreground: hsl(var(--foreground));
+  
+  --shadow-flat: 0 8px 0 rgba(0,0,0,0.06);
+  --font-sans: "Inter", "Chalkboard SE", "Comic Sans MS", system-ui, -apple-system, sans-serif;
+}
+
+@utility btn-push {
+  position: relative;
+  background-color: hsl(var(--primary));
+  color: white;
+  border: 2px solid hsl(12 90% 48%);
+  box-shadow: 0 6px 0 hsl(12 90% 48%);
+  border-radius: 1rem;
+  font-weight: 700;
+  transition: transform 0.1s, box-shadow 0.1s;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+@utility btn-push-secondary {
+  position: relative;
+  background-color: hsl(var(--secondary));
+  color: white;
+  border: 2px solid hsl(135 50% 38%);
+  box-shadow: 0 6px 0 hsl(135 50% 38%);
+  border-radius: 1rem;
+  font-weight: 700;
+  transition: transform 0.1s, box-shadow 0.1s;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+@utility btn-push-accent {
+  position: relative;
+  background-color: hsl(var(--accent));
+  color: hsl(var(--foreground));
+  border: 2px solid hsl(43 95% 42%);
+  box-shadow: 0 6px 0 hsl(43 95% 42%);
+  border-radius: 1rem;
+  font-weight: 700;
+  transition: transform 0.1s, box-shadow 0.1s;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+@utility btn-push-white {
+  position: relative;
+  background-color: white;
+  color: hsl(var(--foreground));
+  border: 2px solid hsl(var(--border));
+  box-shadow: 0 6px 0 hsl(var(--border));
+  border-radius: 1rem;
+  font-weight: 700;
+  transition: transform 0.1s, box-shadow 0.1s;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+@utility card-flat {
+  background-color: hsl(var(--card));
+  border: 3px solid hsl(var(--border));
+  box-shadow: 0 8px 0 rgba(0,0,0,0.06);
+  border-radius: 1.5rem;
+}
+
+body {
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+/* Custom animated background clouds */
+@keyframes hoverCloud {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0px); }
+}
+
+.animate-cloud-slow {
+  animation: hoverCloud 6s ease-in-out infinite;
+}
+
+.animate-cloud-medium {
+  animation: hoverCloud 4.5s ease-in-out infinite;
+}

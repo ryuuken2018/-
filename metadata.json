@@ -1,0 +1,6 @@
+{
+  "name": "萌宠教室",
+  "description": "面向小学班级老师的课堂激励 Web 应用。每位学生认养一只虚拟宝贝萌宠。老师通过加分给宠物升级、进化、装扮；宠物并在共享的花草园中自由漫步、社交和避雨。",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
